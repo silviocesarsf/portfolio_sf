@@ -7,7 +7,7 @@ interface TitleProps {
 const Title = ({ children }: TitleProps) => {
 
     return (
-        <div data-aos="fade-right" className='w-full flex items-center justify-start gap-3'>
+        <div className='w-full flex items-center justify-start gap-3'>
             {/* Text title */}
             <h1 className='text-2xl text-left'>
                 {children}

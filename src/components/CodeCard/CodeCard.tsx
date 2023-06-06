@@ -5,7 +5,7 @@ interface CodeProps {
     children: React.ReactNode
 }
 
-const Code = ({ title, children }: CodeProps) => {
+const CodeCard = ({ title, children }: CodeProps) => {
     return (
         <div className='h-[220px] w-[300px] p-4 bg-[#1E1E1E] flex flex-col items-start justify-center gap-3 shadow-md rounded-lg'>
             {/* Code header */}
@@ -26,4 +26,4 @@ const Code = ({ title, children }: CodeProps) => {
     )
 }
 
-export default Code
+export default CodeCard
