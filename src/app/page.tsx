@@ -5,18 +5,20 @@ import React, { useEffect } from 'react'
 import { FaChevronCircleDown } from "react-icons/fa"
 import { DiSass } from "react-icons/di"
 import { TbBrandReactNative } from "react-icons/tb"
-import { AiOutlineMail, AiFillLinkedin, AiFillGithub, AiOutlineFieldTime } from "react-icons/ai"
-import { SiTypescript, SiTailwindcss, SiNextdotjs, SiStyledcomponents, SiChakraui } from "react-icons/si"
+import { AiOutlineMail, AiFillLinkedin, AiFillGithub, AiOutlineFieldTime, AiOutlineUnorderedList } from "react-icons/ai"
+import { SiTypescript, SiTailwindcss, SiNextdotjs, SiStyledcomponents, SiChakraui, SiNetflix, SiYoutube } from "react-icons/si"
 import { BiSupport } from "react-icons/bi"
 import { HiUserGroup } from "react-icons/hi"
 import { GiNotebook, GiHeartBeats, GiButterfly } from "react-icons/gi"
 
-
 import Aos from 'aos'
-import CodeCard from '@/components/CodeCard/CodeCard'
-import CardSkill from '@/components/CardSkill/CardSkill'
+import CodeCard from '@/components/Cards/CodeCard/CodeCard'
+import CardSkill from '@/components/Cards/CardSkill/CardSkill'
 import Carousel from '@/components/Carousel/Carousel'
-import CardSoftSkill from '@/components/CardSoftSkill/CardSoftSkill'
+import CardSoftSkill from '@/components/Cards/CardSoftSkill/CardSoftSkill'
+import CardProject from '@/components/Cards/CardProject/CardProject'
+import { BsGear } from 'react-icons/bs'
+import Subtitle from '@/components/Title/Subtitle'
 
 const page = () => {
 
@@ -85,8 +87,8 @@ const page = () => {
         <Title>Conhecimentos</Title>
         {/* Techs */}
         <div className='w-full h-full flex flex-col items-between justify-between gap-8'>
-          {/* Carousel techs */}
-          <Carousel title='Tecnologias mais usadas' shadow>
+          {/* Hard skills */}
+          <Carousel title='Hard skills' shadow>
             <CardSkill title='ReactJS' />
             <CardSkill title='Typescript' icon={<SiTypescript />} />
             <CardSkill title='TailwindCSS' icon={<SiTailwindcss />} />
@@ -108,6 +110,23 @@ const page = () => {
             </Carousel>
           </div>
         </div>
+      </section>
+      {/* Projects */}
+      <section className="w-full h-full py-[200px]">
+        <Title>Projetos</Title>
+        <Carousel title='Alguns dos meus projetos'>
+          <CardProject name='Clone Netflix' icon={<SiNetflix />} urlSite='' />
+          <CardProject name='Clone Youtube' icon={<SiYoutube />} urlSite='' />
+          <CardProject name='Todo List' icon={<AiOutlineUnorderedList />} urlSite='' />
+          <CardProject name='Em breve' icon={<BsGear />} urlSite='' />
+          <CardProject name='Em breve' icon={<BsGear />} urlSite='' />
+        </Carousel>
+      </section>
+      <section className="w-full h-full py-[90px]">
+        <Title>Contato</Title>
+        <Subtitle>
+          Ficou interessado ? Entre em contato comigo !!
+        </Subtitle>
       </section>
     </main>
   )

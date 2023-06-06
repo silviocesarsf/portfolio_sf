@@ -53,7 +53,7 @@ const Carousel = ({ children, title, shadow }: CarouselProps) => {
                         </div>
                     </>
                 )}
-                <div ref={carousel} className='flex items-center justify-start space-x-5 overflow-x-auto py-4 scroll-smooth'>
+                <div ref={carousel} className={`w-full flex items-center ${hasOverflow ? "justify-start " : "justify-between"} space-x-5 overflow-x-auto py-4 scroll-smooth`}>
                     {children}
                 </div>
                 {/* Shadow */}
