@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+}
+
+body {
+	@apply bg-slate-900;
+	@apply text-white;
+	@apply font-sans;
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
